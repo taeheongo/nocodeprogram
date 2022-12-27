@@ -1,9 +1,9 @@
 /*
+submissoin : https://leetcode.com/problems/coin-change/submissions/866193026/
 Brute Force (Time Limite Exceeded)
 
  위의 Solution과 시간 복잡도가 동일하나 구조가 다르다.
  구조를 다르게 한 이유는 subproblem으로 나눌 수 있기 때문.(아직 memoization하지 않은 상태)
- submissoin : https://leetcode.com/problems/coin-change/submissions/866193026/
 */
 #include <bits/stdc++.h>
 using namespace std;
