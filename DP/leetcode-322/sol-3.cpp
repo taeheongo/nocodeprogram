@@ -15,4 +15,34 @@ f(1)   f(0)
     Time: O(S*N)
     Space: O(S) 
 */
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+private:
+    int dp(vector<int>& coins, int amount, vector<int>& v){
+        if(amount < 0){ return -1; }
+        if(amount == 0) { return 0; }
+        if(v[amount]) return v[amount];
+
+        int ret = 1e9;
+        int tmp = 0;
+        for(int e: coins){
+            tmp = dp(coins, amount - e, v);
+            if(tmp >= 0)
+                ret = min(ret, tmp + 1);
+        }
+
+        if(ret == 1e9) return v[amount] = -1;
+
+        return v[amount] = ret;
+    }
+
+public:
+    int coinChange(vector<int>& coins, int amount) {
+        vector<int> v(amount+1, 0);
+
+        return dp(coins, amount, v);
+    }
+};
 
