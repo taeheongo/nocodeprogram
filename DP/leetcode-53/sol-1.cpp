@@ -1,5 +1,6 @@
-// 테스트용 파일
-
+// submission: https://leetcode.com/problems/maximum-subarray/submissions/867346544/
+// time: O(N)
+// space: O(1)
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -24,19 +25,6 @@ public:
             }
         }
         
-        for(int i= max[0]; i<=max[1]; i++){
-            cout << nums[i] << " ";
-        }
-        cout << endl;
-
         return max[2];
     }
 };
-
-int main() { 
-    Solution s;
-    vector<int> v{-2,1,-3,4,-1,2,1,-5,4};
-    cout << s.maxSubArray(v) << endl;    
-
-    return 0;
-}
